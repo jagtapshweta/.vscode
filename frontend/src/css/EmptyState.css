@@ -1,0 +1,34 @@
+/* EmptyState.css */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: #555;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+}
+
+.empty-state__icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.empty-state__message {
+    font-size: 1.2rem;
+    color: #888;
+}
+
+/* Optional: Customize based on type */
+.empty-state--task {
+    background-color: #f9f9f9;
+}
+
+.empty-state--contact {
+    background-color: #f3f9ff;
+}
+
+.empty-state--item {
+    background-color: #fff7f0;
+}

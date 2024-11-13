@@ -1,0 +1,117 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.navbar-logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Search Bar */
+.navbar-search {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.navbar-search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0.4rem;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+/* Navigation Links */
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+    color: #4CAF50;
+}
+
+/* Profile and Cart Icons */
+.navbar-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.icon-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+    color: #4CAF50;
+}
+
+/* Login and Signup Buttons */
+.navbar-buttons .btn-login,
+.navbar-buttons .btn-logout,
+.navbar-buttons .btn-signup {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-buttons .btn-signup {
+    background-color: #008CBA;
+}
+
+.navbar-buttons .btn-login:hover,
+.navbar-buttons .btn-signup:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .navbar-links,
+    .navbar-search,
+    .navbar-buttons {
+        display: none;
+        /* Hide for mobile */
+    }
+
+    .navbar-icons {
+        gap: 0.5rem;
+    }
+}
