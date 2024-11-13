@@ -1,0 +1,131 @@
+/* App container */
+.App {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Image upload form */
+.image-upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.image-upload-form input[type="file"] {
+    margin: 10px 0;
+}
+
+.image-upload-form .preview-image {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.image-upload-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.image-upload-form button:hover {
+    background-color: #45a049;
+}
+
+.image-upload-form .error {
+    color: #e74c3c;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+/* Photo gallery */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .image-upload-form {
+        width: 90%;
+    }
+}
+
+/* Individual photo item */
+.photo-item {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.photo-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image within the photo item */
+.photo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.photo-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Optional overlay effect */
+.photo-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.photo-item:hover::after {
+    opacity: 1;
+}
